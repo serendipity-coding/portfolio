@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'VT323', monospace;
+}
+nav {
+  display: flex;
+  margin: 0 auto 60px;
+  gap: 10px;
+  align-items: center;
+}
+nav h1 {
+  margin-right: auto;
+}
+nav a {
+  color: #fb8500;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  border: 1px solid #fb8500;
+  text-decoration: none;
+  width: 5rem;
+  text-align: center;
+}
+
+nav a.active {
+  color: white;
+  background: #fb8500;
+  text-decoration: none;
+}
+
+.orangeText {
+  color: #fb8500;
+}
