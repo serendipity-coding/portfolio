@@ -1,4 +1,6 @@
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 //styles
 
 import Typewriter from 'typewriter-effect';
@@ -6,7 +8,8 @@ import { Button, Grid, Typography } from '@mui/material';
 
 // import './Home.css';
 export const Home = () => {
-  let history = useHistory();
+  // let history = useHistory();
+  const navigate = useNavigate();
   return (
     <Grid
       className="home title"
@@ -35,7 +38,8 @@ export const Home = () => {
           color="primary"
           sx={{ color: '#fff', borderRadius: '10px', width: '10rem' }}
           onClick={() => {
-            history.push(`/about`);
+            // history.push(`/about`);
+            navigate('/about');
           }}
         >
           Get to know me

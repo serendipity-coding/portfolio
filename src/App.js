@@ -1,13 +1,15 @@
 import './App.css';
 import {
   BrowserRouter,
+  Routes,
   Route,
-  Switch,
+  // Switch,
   NavLink,
-  Redirect,
-  Router
+  // Redirect
+  Navigate
+  // Router
 } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
@@ -20,7 +22,6 @@ import {
 import Portfolio from './pages/Portfolio';
 
 function App() {
-  let history = useHistory();
   const customTheme = createTheme({
     palette: {
       primary: {
@@ -39,7 +40,7 @@ function App() {
     typography: {
       button: {
         textTransform: 'none',
-
+        fontFamily: 'VT323',
         fontSize: '16px',
         color: '#fff'
       }
@@ -59,26 +60,15 @@ function App() {
               <NavLink to="/projects">Projects</NavLink>
               {/* <NavLink to="/contact">Contact</NavLink> */}
             </nav>
-            <Switch>
-              <Route path="/" exact>
-                <Home />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/projects">
-                <Portfolio />
-              </Route>
-              <Route path="/articles/:id">
-                <Article />
-              </Route>
-              <Route path="*">
-                <Redirect to="/" />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/" exact element={<Home />} />
+
+              <Route path="/contact" element={<Contact />} />
+
+              <Route path="/about" element={<About />} />
+
+              <Route path="/projects" element={<Portfolio />} />
+            </Routes>
           </BrowserRouter>
         </div>
       </ThemeProvider>
