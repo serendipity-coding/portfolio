@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  // Switch,
   NavLink,
   // Redirect
   Navigate
