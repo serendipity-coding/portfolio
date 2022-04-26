@@ -1,18 +1,10 @@
 import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  NavLink,
-  // Redirect
-  Navigate
-  // Router
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
-import { Article } from './pages/Article';
+
 import {
   ThemeProvider,
   StyledEngineProvider,
