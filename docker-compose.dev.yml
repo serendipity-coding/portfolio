@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  front:
+    container_name: front-portfolio
+    image: app-dev
+    build: .
+    # volumes:
+    #   - ./src:/app/src
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
