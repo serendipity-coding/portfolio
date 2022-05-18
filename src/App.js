@@ -11,6 +11,7 @@ import {
   createTheme
 } from '@mui/material/styles';
 import Portfolio from './pages/Portfolio';
+import MenuDrawer from './components/MenuDrawer';
 
 function App() {
   const customTheme = createTheme({
@@ -21,9 +22,9 @@ function App() {
       secondary: {
         main: '#219EBC'
       },
-      text: {
-        primary: '#fff'
-      },
+      // text: {
+      //   primary: '#fff'
+      // },
       action: {
         disabledBackground: '#fff'
       }
@@ -44,12 +45,8 @@ function App() {
           <BrowserRouter>
             <nav>
               <h1>.ZCODER</h1>
-              <NavLink to="/" exact>
-                Home
-              </NavLink>
-              <NavLink to="/about">About me</NavLink>
-              <NavLink to="/projects">Projects</NavLink>
-              {/* <NavLink to="/contact">Contact</NavLink> */}
+
+              <MenuDrawer />
             </nav>
             <Routes>
               <Route path="/" exact element={<Home />} />

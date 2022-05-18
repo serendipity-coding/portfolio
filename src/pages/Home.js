@@ -2,13 +2,10 @@
 import { useNavigate } from 'react-router-dom';
 
 //styles
-
 import Typewriter from 'typewriter-effect';
 import { Button, Grid, Typography } from '@mui/material';
 
-// import './Home.css';
 export const Home = () => {
-  // let history = useHistory();
   const navigate = useNavigate();
   return (
     <Grid
@@ -17,7 +14,7 @@ export const Home = () => {
       direction="column"
       sx={{ width: '90%', margin: 'auto', marginTop: '6rem' }}
     >
-      <Grid sx={{ height: '40vh' }}>
+      <Grid>
         <Typography variant="h1" component="div" className="title">
           Hello, I am <span className="orangeText">Amira</span>
         </Typography>
@@ -36,7 +33,12 @@ export const Home = () => {
         <Button
           variant="contained"
           color="primary"
-          sx={{ color: '#fff', borderRadius: '10px', width: '10rem' }}
+          sx={{
+            color: '#fff',
+            borderRadius: '10px',
+            width: '10rem',
+            marginTop: '2rem'
+          }}
           onClick={() => {
             // history.push(`/about`);
             navigate('/about');
@@ -44,21 +46,6 @@ export const Home = () => {
         >
           Get to know me
         </Button>
-        {/* <Button
-          variant="contained"
-          color="secondary"
-          sx={{
-            color: '#fff',
-            borderRadius: '10px',
-            width: '10rem',
-            marginLeft: '1rem'
-          }}
-          onClick={() => {
-            history.push(`/contact`);
-          }}
-        >
-          
-        </Button> */}
       </Grid>
     </Grid>
   );
